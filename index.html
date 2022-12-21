@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="wind.css">
+
+</head>
+
+<body>
+    <div class="main-container">
+
+        <div class="top-cont">
+            <div class="left-cont">
+                <div class="left-contnt">
+                    <div class="wcm">
+                        <div class="wc-cont">
+                            <h1 class="W-C">Weather <span id="country">IN</span></h1>
+                        </div>
+                    </div>
+
+                    <div class="city-name">
+                        <div class="city-lat-lon">
+                            <h2 id="city-Name" class="city-name-h">Mumbai</h2>
+                            <p>Lat : <span id="lat" class="chcolor"></span></p>
+                            <p>Lon : <span id="lon" class="chcolor"></span></p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="right-cont">
+                <div class="time-cont">
+                    <div class="time-flex">
+                        <p id="hour"></p>
+                        <p id="colon">:</p>
+                        <p id="min"></p>
+                        <p id="sec"></p>
+                        <p id="am-pm"></p>
+                    </div>
+                </div>
+                <div class="country-selecter">
+
+                    <select id="countrys" onchange="state(this.value)">
+
+                    </select>
+
+                </div>
+                <div class="city-state-selecter">
+                    <select id="state-select" onchange="citys(this.value)">
+                        <option value="" selected>Select State</option>
+                    </select>
+                    <select id="city-select" onchange="gwds()">
+                        <option value="" selected>Select City</option>
+                    </select>
+
+                </div>
+                <div class="gwether">
+                    <button onclick="getWetherByCity()" id="gwd" disabled>Get Weather</button>
+                </div>
+
+                <div class="search-cont">
+                    <input type="text" id="search" oninput="ai()" placeholder="Search by city name" onfocus="focuss()"
+                        onblur="blurs()" onmouseover="onmousehover()" onmouseout="onmouseouts()">
+                    <button id="go" onclick="loadWeather()" disabled>Search</button>
+                </div>
+                <div class="main-weather-cont">
+                    <div class="weather-data">
+                        <div class="date-cont">
+                            <p id="mdate">Monday</p>
+                            <img id="mi" src="" alt="icon" width="50" height="50">
+                        </div>
+                        <div class="temp-cont">
+                            <div class="degcel">
+                                <p class="tmp chcolor" id="temp">22</p>
+                                <p class="deg chcolor">O</p>
+                                <p class="cel chcolor">C</p>
+                            </div>
+
+                            <p id="sunny" class="chcolor">Sunny</p>
+                            <div class="degcel">
+                                <p class="tempm">Min : <span id="minmum" class="chcolor"></span></p>
+                                <p class="degm chcolor">O</p>
+                                <p class="celm chcolor">C</p>
+                            </div>
+                            <div class="degcel">
+                                <p class="tempm">Max : <span id="max" class="chcolor"></span></p>
+                                <p class="degm chcolor">O</p>
+                                <p class="celm chcolor">C</p>
+                            </div>
+
+                            <p class="tempm">Windspeed : <span id="windspeed" class="chcolor"></span></p>
+                            <p class="tempm">Humidity : <span id="humidity" class="chcolor"></span></p>
+                            <p class="tempm" id="sunrise">Sunrise : <span id="rise" class="chcolor"></span> <span
+                                    id="srap" class="chcolor"> </span></p>
+                            <p class="tempm" id="sunset">Sunset : <span id="set" class="chcolor"></span> <span id="ssap"
+                                    class="chcolor"> </span></p>
+                        </div>
+                    </div>
+                    <div><button id="loc"></button></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="bottom-cont">
+            <div class="forcast-cont">
+                <div class="forecast">
+                    <div class="fda">
+                        <p class="fdateb"></p>
+                        <p class="ftempb"></p>
+                        <p class="fsunny"></p>
+                        <p class="fwind"></p>
+                        <img src="" alt="wimg" class="ficon">
+                    </div>
+
+
+                </div>
+
+                <div class="forecast">
+                    <div class="fda">
+                        <p class="fdateb"></p>
+                        <p class="ftempb"></p>
+                        <p class="fsunny"></p>
+                        <p class="fwind"></p>
+                        <img src="" alt="wimg" class="ficon">
+                    </div>
+                </div>
+
+                <div class="forecast">
+                    <div class="fda">
+                        <p class="fdateb"></p>
+                        <p class="ftempb"></p>
+                        <p class="fsunny"></p>
+                        <p class="fwind"></p>
+                        <img src="" alt="wimg" class="ficon">
+                    </div>
+                </div>
+
+                <div class="forecast">
+                    <div class="fda">
+                        <p class="fdateb"></p>
+                        <p class="ftempb"></p>
+                        <p class="fsunny"></p>
+                        <p class="fwind"></p>
+                        <img src="" alt="wimg" class="ficon">
+                    </div>
+                </div>
+
+                <div class="forecast">
+                    <div class="fda">
+                        <p class="fdateb"></p>
+                        <p class="ftempb"></p>
+                        <p class="fsunny"></p>
+                        <p class="fwind"></p>
+                        <img src="" alt="wimg" class="ficon">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="wind.js"></script>
+
+</body>
+
+</html>

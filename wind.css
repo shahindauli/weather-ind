@@ -1,0 +1,474 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('wbg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.top-cont {
+    min-height: 70vh;
+    display: flex;
+}
+
+.left-cont {
+    width: 30%;
+
+}
+
+.left-contnt {
+    width: 100%;
+}
+
+.wc-cont {
+    margin-left: 10%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.city-name {
+    width: 250px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    margin-top: 150px;
+    background-color: rgb(0, 0, 255, .2);
+}
+
+.city-lat-lon {
+    padding: 5px;
+}
+
+.right-cont {
+    width: 70%;
+
+}
+
+.time-cont {
+    margin-top: 30px;
+}
+
+.time-flex {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.time-flex>p {
+    margin-left: 10px;
+    font-size: 40px;
+}
+
+#sec {
+    font-size: 20px;
+}
+
+#am-pm {
+    font-size: 20px;
+}
+
+.country-selecter {
+    display: flex;
+    justify-content: center;
+}
+
+#countrys {
+    width: 200px;
+    height: 30px;
+    margin-top: 10px;
+    border: 1px solid blue;
+    background-color: rgb(4, 92, 255);
+    color: white;
+    outline: none;
+}
+
+.city-state-selecter {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#state-select {
+    width: 200px;
+    height: 30px;
+    border: 1px solid blue;
+    outline-style: none;
+    background-color: rgb(4, 92, 255);
+    color: white;
+}
+
+#city-select {
+    width: 200px;
+    height: 30px;
+    border: 1px solid blue;
+    margin-left: 5px;
+    background-color: rgb(4, 92, 255);
+    color: white;
+    outline: none;
+}
+
+.gwether {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.gwether>button {
+    background-color: blue;
+    border: none;
+    color: white;
+    height: 30px;
+    outline: none;
+    width: 200px;
+    font-size: 20px;
+}
+
+.gwether>button:hover {
+    background-color: white;
+    border: 1px solid blue;
+    color: blue;
+}
+
+.search-cont {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#search {
+    width: 400px;
+    height: 30px;
+    border: none;
+    padding-left: 10px;
+    color: blue;
+    font-size: 16px;
+}
+
+
+
+#go {
+    width: 150px;
+    margin-left: 5px;
+    border: none;
+    outline: none;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+}
+
+#go:hover {
+    background-color: white;
+    color: blue;
+    border: 1px solid blue;
+}
+
+
+.main-weather-cont {
+    background-color: rgb(0, 0, 255, .2);
+    width: 250px;
+    height: 250px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#loc {
+    background-image: url('th.jpg');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    background-color: blue;
+    border-radius: 10px;
+    right: 10px;
+    bottom: 10px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#loc:hover {
+    border: 2px solid black;
+}
+
+.weather-data {
+    margin-left: 10px;
+}
+
+.date-cont {
+    display: flex;
+}
+
+.date-cont>p {
+    font-size: 20px;
+}
+
+img {
+    margin-left: 30px;
+}
+
+.degcel {
+    display: flex;
+}
+
+.deg {
+    font-size: 8px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.cel {
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.degm {
+    font-size: 8px;
+    margin-left: 5px;
+    margin-top: 1px;
+}
+
+.celm {
+    font-size: 12px;
+}
+
+.tmp {
+    font-size: 30px;
+}
+
+#sunny {
+    font-size: 14px;
+}
+
+.bottom-cont {
+    display: flex;
+    align-items: center;
+    min-height: 30vh;
+
+}
+
+.forcast-cont {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.forecast {
+    width: 15%;
+    height: 150px;
+    background-color: rgb(0, 0, 255, .2);
+}
+
+.chcolor {
+    color: rgb(0, 0, 0);
+}
+
+/* media query statrts*/
+@media only screen and (max-width: 1150px) {
+
+    #search {
+        width: 350px;
+    }
+
+    #go {
+        width: 140px;
+    }
+
+    .gwether>button {
+        width: 180px;
+    }
+
+    #state-select,
+    #city-select {
+        width: 180px;
+    }
+
+    .forecast {
+        width: 18%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #search {
+        width: 300px;
+    }
+
+    #go {
+        width: 120px;
+    }
+
+    .gwether>button {
+        width: 150px;
+    }
+
+    #state-select,
+    #city-select {
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .top-cont {
+        flex-wrap: wrap;
+    }
+
+    .left-cont {
+        width: 100%;
+
+    }
+
+    .right-cont {
+        width: 100%;
+    }
+
+    .left-contnt {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .wc-cont {
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    .city-name {
+        margin-top: 10px;
+        margin-right: 10px;
+        height: auto;
+        width: auto;
+        align-items: flex-start;
+    }
+
+    #search {
+        width: 350px;
+    }
+
+    #go {
+        width: 140px;
+    }
+
+    .gwether>button {
+        width: 180px;
+    }
+
+    #state-select,
+    #city-select {
+        width: 180px;
+    }
+
+    .forcast-cont {
+        margin-bottom: 10px;
+    }
+
+    .forecast {
+        width: 40%;
+        margin-top: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    #search {
+        width: 60%;
+    }
+
+    #go {
+        width: 100px;
+    }
+
+    .gwether>button {
+        width: 150px;
+    }
+
+    #state-select,
+    #city-select {
+        width: 150px;
+    }
+
+    .city-name {
+        max-width: 150px;
+    }
+
+    .forecast {
+        width: 60%;
+        margin-top: 20px;
+    }
+
+    .W-C {
+        font-size: 25px;
+    }
+
+    .city-name-h {
+        font-size: 20px;
+    }
+
+    .city-lat-lon>p {
+        font-size: 15px;
+    }
+
+    .time-flex>p {
+        font-size: 30px;
+    }
+
+    .gwether>button {
+        font-size: 16px;
+    }
+
+    #go {
+        font-size: 16px;
+    }
+
+    .wc-cont {
+        margin-left: 5px;
+    }
+
+    .city-name {
+        margin-right: 5px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .main-container {
+        width: 360px;
+    }
+
+}
+
+/* forcast code */
+.forecast {
+    display: flex;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+}
+
+.fda {
+    padding: 10px;
+}
+
+
+/* code end */
